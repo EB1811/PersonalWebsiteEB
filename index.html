@@ -11,11 +11,11 @@
 	<!--Google Fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Tangerine&display=swap" rel="stylesheet">
 	
-	<!--AOS-->
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<!--Scroll To Plugin-->
+	<script type="text/javascript" src="jquery.scrollTo.min.js"></script>
 	
 	<style>
+		
 		body, html {
 			padding: 0;
 			border: none;
@@ -26,13 +26,15 @@
 			-webkit-text-size-adjust: 100%;
 			-moz-text-size-adjust: 100%;
 			-ms-text-size-adjust: 100%;
+			background-color: #ffffff;
 		}
 		
+		/* Name Page. */
 		#first {
 			position: relative;
 			height: 100%;
 			background-color: #191919;
-			z-index: 1;
+			z-index: 3;
 		}
 		
 		#name {
@@ -45,6 +47,8 @@
 			text-align: center;
 			font-size: 100px;
 			letter-spacing: 0.01em;
+			animation-name: fadein1;
+			animation-duration: 4s;
 		}
 		@keyframes fadein1 {
 			from { opacity: 0;}
@@ -57,9 +61,8 @@
 			bottom: 0;
 			margin-bottom: 20px;
 			text-align: center;
-			z-index: 2;
 		}
-		#showcaseText {
+		.showcaseText {
 			display: inline-block;
 			padding: 5px;
 			margin: 0 2.5px;
@@ -76,8 +79,8 @@
 			cursor: pointer;
 			transition-duration: 0.2s;
 		}
-		#showcaseText:hover {
-			color: #E61300;
+		.showcaseText:hover {
+			color: #00cccc;
 		}
 		#gitLinkText {
 			display: inline-block;
@@ -96,219 +99,374 @@
 			transition-duration: 0.2s;
 		}
 		#gitLinkText:hover {
-			color: #E61300;
+			color: #00cccc;
 		}
 		
-		/*Second Block*/
-		#section2 {
-		}
-		#section2prop {
-			position: relative;
-			top: 0%;
-			height: 100%;
-			width: 100%;
-			background-color: #191919;
-		}
-		#projectName1 {
+		
+		/* Projects. */
+		.slide {
 			position: relative;
 			float: left;
 			width: 100%;
 			height: 100%;
+			margin: 0px;
 		}
-		#projectName2 {
-			position: relative;
-			float: left;
-			width: 100%;
+		
+		#project1 {
+			position: absolute;
+			left: 0;
+			width: 50%;
 			height: 100%;
-		}
-		#projectName3 {
-			position: relative;
-			float: left;
-			width: 100%;
-			height: 100%;
-		}
-		.projectHover {
-			height: 100%;
-			width: 100%;
-			background-color: #ffffff;
-			opacity: 0;
+			z-index: 2;
+			overflow: hidden;
 			cursor: pointer;
-			transition-duration: 0.2s;
 		}
-		.projectHover:hover {
-			opacity: 0.05;
+		#project2 {
+			position: absolute;
+			right: 0;
+			width: 50%;
+			height: 100%;
+			z-index: 2;
+			overflow: hidden;
+			cursor: pointer;
+		}
+		#project3 {
+			position: absolute;
+			left: 0;
+			width: 50%;
+			height: 100%;
+			z-index: 2;
+			overflow: hidden;
+			cursor: pointer;
+		}
+		#project4 {
+			position: absolute;
+			right: 0;
+			width: 50%;
+			height: 100%;
+			z-index: 2;
+			overflow: hidden;
+			cursor: pointer;
+		}
+		.imageContainer {
+			float: left;
+			height: 100%;
+			width: 100%;
+			z-index: 1;
+			overflow: hidden;
 		}
 		.projectImg {
-			position: absolute;
 			display: block;
-			top: 50%;
-			transform: translateY(-50%);
-			max-width: 100%;
 			width: 100%;
 			height: 100%;
-			cursor: pointer;
-			opacity: 1;
-			-webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
-			filter: blur(1px);
+			/* filter: blur(1px); */
+			transform: scale(1.01);
+			transition: transform 30s linear;
 		}
-		#projectName1Text {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			font-family: arial;
-			font-size: 30px;
-			font-weight: bold;
-			text-decoration: none;
-			color: #ff4f3f;
-		}
-		#projectName2Text {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			font-family: arial;
-			font-size: 30px;
-			font-weight: bold;
-			text-decoration: none;
-			color: #3a3998;
-		}
-		#projectName3Text {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			font-family: arial;
-			font-size: 30px;
-			font-weight: bold;
-			text-decoration: none;
-			color: #fbff6b;
-		}
-		#projectName1Explanation {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			font-family: arial;
-			font-size: 30px;
-			font-weight: bold;
-			text-decoration: none;
-			color: #ff4f3f;
-			text-align: center;
-		}
-		#projectName2Explanation {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			font-family: arial;
-			font-size: 30px;
-			font-weight: bold;
-			text-decoration: none;
-			color: #3a3998;
-			text-align: center;
-		}
-		#projectName3Explanation {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			font-family: arial;
-			font-size: 30px;
-			font-weight: bold;
-			text-decoration: none;
-			color: #fbff6b;
-			text-align: center;
+		.projectImg:hover {
+			transform: scale(1.5);
 		}
 		
-		/*Mobile Phones*/
-		@media only screen and (min-width:900px) {
-			#projectName1, #projectName2, #projectName3 {
-				width:33.33%;
-			}
-			
-			/*Cool slide effect for non-mobile*/
-			#section2 {
-				height: 100%;
-				width: 100%;
-				background-color: #ffffff;
-				z-index: -1;
-			}
-			#section2prop {
-				position: fixed;
-			}
+		#pDescription1Slide {
+			position: absolute;
+			left: 0;
+			width: 50%;
+			height: 100%;
+			display: none;
+			z-index: 0;
 		}
-
+		#pDescription2Slide {
+			position: absolute;
+			right: 0;
+			width: 50%;
+			height: 100%;
+			display: none;
+			z-index: 0;
+		}
+		#pDescription3Slide {
+			position: absolute;
+			left: 0;
+			width: 50%;
+			height: 100%;
+			display: none;
+			z-index: 0;
+		}
+		#pDescription4Slide {
+			position: absolute;
+			right: 0;
+			width: 50%;
+			height: 100%;
+			display: none;
+			z-index: 0;
+		}
+		.pDescriptionText {
+			position: absolute;
+			color: #000000;
+			top: 50%;
+			left: 50%;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+		
+		
+		#projectName1 {
+			color: #ff4433;
+		}
+		#projectName2 {
+			color: #ffffff;
+		}
+		#projectName3 {
+			color: #000000;
+		}
+		#projectName4 {
+			color: #fbff6b;
+		}
+		.projectNameText {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			font-family: arial;
+			font-size: 2.5em;
+			text-decoration: none;
+			white-space: nowrap;
+			font-weight: bold;
+		}
+		
+		#infoExpand1 {
+			position: absolute;
+			top: 52.5%;
+			left: 50%;
+			margin-top: 15px;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			display: none;
+			color: #ff4433;
+		}
+		#infoExpand2 {
+			position: absolute;
+			top: 52.5%;
+			left: 50%;
+			margin-top: 15px;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			display: none;
+			color: #ffffff;
+		}
+		#infoExpand3 {
+			position: absolute;
+			top: 52.5%;
+			left: 50%;
+			margin-top: 15px;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			display: none;
+			color: #000000;
+		}
+		#infoExpand4 {
+			position: absolute;
+			top: 52.5%;
+			left: 50%;
+			margin-top: 15px;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			display: none;
+			color: #fbff6b;
+		}
+		.infoExpandText {
+			font-family: arial;
+			font-size: 1em;
+			font-weight: bold;
+			text-decoration: none;
+			white-space: nowrap;
+		}
+		#infoCollapse1 {
+			position: absolute;
+			top: 52.5%;
+			left: 50%;
+			margin-top: 15px;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			display: none;
+			color: #ff4433;
+		}
+		#infoCollapse2 {
+			position: absolute;
+			top: 52.5%;
+			left: 50%;
+			margin-top: 15px;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			display: none;
+			color: #ffffff;
+		}
+		#infoCollapse3 {
+			position: absolute;
+			top: 52.5%;
+			left: 50%;
+			margin-top: 15px;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			display: none;
+			color: #000000;
+		}
+		#infoCollapse4 {
+			position: absolute;
+			top: 52.5%;
+			left: 50%;
+			margin-top: 15px;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			display: none;
+			color: #fbff6b;
+		}
+		.infoExpandText {
+			font-family: arial;
+			font-size: 1em;
+			font-weight: bold;
+			text-decoration: none;
+			white-space: nowrap;
+		}
+		
+		/* Contact Page Panel */
+		#contactPage {
+			position: relative;
+			float: left;
+			width: 100%;
+			height: 100%;
+			margin: 0px;
+			background-color: #191919;
+		}
+		#contactPageTitle {
+			position: absolute;
+			width: 100%;
+			top: 45%;
+			transform: translateY(-55%);
+			color: #00cccc;
+			font-family: 'Tangerine', cursive;
+			text-align: center;
+			font-size: 100px;
+			letter-spacing: 0.01em;
+		}
+		#contactPageDesc {
+			position: absolute;
+			top: 52.5%;
+			left: 50%;
+			margin-top: 15px;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			color: #ffffff;
+			font-family: arial;
+			font-size: 1em;
+			text-decoration: none;
+			white-space: nowrap;
+			font-weight: bold;
+		}
+		
 	</style>
 	
 </head>
 
 <body>
 	<div id="first">
-		<div id="name" data-aos="fade" data-aos-easing="ease-in" data-aos-duration="2500">
+		<div id="name">
 			Emmanuils Borovikovs
 		</div>
 		
 		<div id="showcaseButton">
-			<a href="#section2" id="showcaseText">
+			<a href="#project1" class="showcaseText">
 				Projects
 			</a>
-			<a href="https://github.com/EB1811" target="_blank" id="showcaseText">
+			<a href="https://github.com/EB1811" target="_blank" class="showcaseText">
 				Github
 			</a>
 		</div>
 	</div>
-	
-	
-	<div id="section2">
-	
-	</div>
-	
-	<div id="section2prop">
-		<div id="projectName1">
-			<img src="image1.jpg" class="projectImg">
-			<div id="projectName1Text">
-				Leetcode
+
+	<div class="slide">
+		<div id="project1">
+			<div class="imageContainer">
+				<img src="image1.jpg" class="projectImg">
 			</div>
-			<div id="projectName1Explanation">
-				Over 10 leetcode problems solved.
+			<div id="projectName1">
+				<div class="projectNameText">Mobile Budgeting App</div>
 			</div>
-			<div class="projectHover">
+			<div id="infoExpand1">
+				<div class="infoExpandText">Click For More Info</div>
+			</div>
+			<div id="infoCollapse1">
+				<div class="infoExpandText">Click For Less Info</div>
 			</div>
 		</div>
-			
-		<div id="projectName2">
-			<img src="image2.jpg" class="projectImg">
-			<div id="projectName2Text">
-				Finance App
-			</div>
-			<div id="projectName2Explanation">
-				Andriod application providing budgeting assistance.
-			</div>
-			<div class="projectHover">
-			</div>
-		</div>
-			
-		<div id="projectName3">
-			<img src="image3.jpg" class="projectImg">
-			<div id="projectName3Text">
-				Project X
-			</div>
-			<div id="projectName3Explanation">
-				Coming Soon.
-			</div>
-			<div class="projectHover">
-			</div>
+		<div id="pDescription1Slide">
+			<div class="pDescriptionText">This is the description of the project.</div>
 		</div>
 		
-		<div id="projectDiv">
-			
+		<div id="project2">
+			<div class="imageContainer">
+				<img src="image2.jpg" class="projectImg">
+			</div>
+			<div id="projectName2">
+				<div class="projectNameText">Geopolitical News Web Crawler</div>
+			</div>
+			<div id="infoExpand2">
+				<div class="infoExpandText">Click For More Info</div>
+			</div>
+			<div id="infoCollapse2">
+				<div class="infoExpandText">Click For Less Info</div>
+			</div>
+		</div>
+		<div id="pDescription2Slide">
+			<div class="pDescriptionText">This is the description of the project.</div>
+		</div>
+	</div>
+	
+	<div class="slide">
+		<div id="project3">
+			<div class="imageContainer">
+				<img src="image3.jpg" class="projectImg">
+			</div>
+			<div id="projectName3">
+				<div class="projectNameText">Web Based Task Manager</div>
+			</div>
+			<div id="infoExpand3">
+				<div class="infoExpandText">Click For More Info</div>
+			</div>
+			<div id="infoCollapse3">
+				<div class="infoExpandText">Click For Less Info</div>
+			</div>
+		</div>
+		<div id="pDescription3Slide">
+			<div class="pDescriptionText">This is the description of the project.</div>
+		</div>
+		
+		<div id="project4">
+			<div class="imageContainer">
+				<img src="image4.jpg" class="projectImg">
+			</div>
+			<div id="projectName4">
+				<div class="projectNameText">Other Small Projects</div>
+			</div>
+			<div id="infoExpand4">
+				<div class="infoExpandText">Click For More Info</div>
+			</div>
+			<div id="infoCollapse4">
+				<div class="infoExpandText">Click For Less Info</div>
+			</div>
+		</div>
+		<div id="pDescription4Slide">
+			<div class="pDescriptionText">This is the description of the project.</div>
+		</div>
+	</div>	
+	
+	<div id="contactPage">
+		<div id="contactPageTitle">
+			Contact Me
+		</div>
+		<div id="contactPageDesc">
+			emmanuilsborovikovs@outlook.com <br>
+			github.com/EB1811
 		</div>
 	</div>
 </body>
@@ -316,59 +474,169 @@
 </html>
 
 <script>
-	AOS.init();
-	
-	// Fade in/out on click.
+	var firstAnim = 300;
+	var secondAnim = 300;
+	var thirdAnim = 700;
+
 	$(document).ready(function(){
-		// Hides the project explanation texts.
-		$("#projectName1Explanation").hide();
-		$("#projectName2Explanation").hide();
-		$("#projectName3Explanation").hide();
+		// Slide with descriptions on click + fade out infoExpand/Collapse text.
+		$("#project1").click(function(){
+			$.scrollTo('#project1', {queue:true});
+			if($("#project2").is(":visible")){
+					$("#infoExpand1").delay(firstAnim).fadeOut(250);
+					$("#project2").delay(secondAnim).fadeOut(250);
+					$("#project1").delay(thirdAnim).animate({left: '50%'}, 250, 'swing');
+					$("#project1").promise().done(function() {
+						$("#pDescription1Slide").delay(100).fadeIn(250);
+					});
+				}
+				else if($("#pDescription1Slide").is(":visible")){
+					$("#infoCollapse1").delay(firstAnim).fadeOut(250);
+					$("#pDescription1Slide").delay(secondAnim).fadeOut(250);
+					$("#project1").delay(thirdAnim).animate({left: 0}, 250, 'swing');
+					$("#project1").promise().done(function() {
+						$("#project2").delay(100).fadeIn(250);
+					});
+				}
+		});
+		$("#project2").click(function(){
+			$.scrollTo('#project2', {queue:true});
+			if($("#project1").is(":visible")){
+				$("#infoExpand2").delay(firstAnim).fadeOut(250);
+				$("#project1").delay(secondAnim).fadeOut(250);
+				$("#project2").delay(thirdAnim).animate({right: '50%'}, 250, 'swing');
+				$("#project2").promise().done(function() {
+					$("#pDescription2Slide").delay(100).fadeIn(250);
+				});
+			}
+			else if($("#pDescription2Slide").is(":visible")){
+				$("#infoCollapse2").delay(firstAnim).fadeOut(250);
+				$("#pDescription2Slide").delay(secondAnim).fadeOut(250);
+				$("#project2").delay(thirdAnim).animate({right: 0}, 250, 'swing');
+				$("#project2").promise().done(function() {
+					$("#project1").delay(100).fadeIn(250);
+				});
+			};
+		});
+		$("#project3").click(function(){		
+			$.scrollTo('#project3', {queue:true});
+			if($("#project4").is(":visible")){
+				$("#infoExpand3").delay(firstAnim).fadeOut(250);
+				$("#project4").delay(secondAnim).fadeOut(250);
+				$("#project3").delay(thirdAnim).animate({left: '50%'}, 250, 'swing');
+				$("#project3").promise().done(function() {
+					$("#pDescription3Slide").delay(100).fadeIn(250);
+				});
+			}
+			else if($("#pDescription3Slide").is(":visible")){
+				$("#infoCollapse3").delay(firstAnim).fadeOut(250);
+				$("#pDescription3Slide").delay(secondAnim).fadeOut(250);
+				$("#project3").delay(thirdAnim).animate({left: 0}, 250, 'swing');
+				$("#project3").promise().done(function() {
+					$("#project4").delay(100).fadeIn(250);
+				});
+			}
+		});
+		$("#project4").click(function(){	
+			$.scrollTo('#project4', {queue:true});
+			if($("#project3").is(":visible")){
+				$("#infoExpand4").delay(firstAnim).fadeOut(250);
+				$("#project3").delay(secondAnim).fadeOut(250);
+				$("#project4").delay(thirdAnim).animate({right: '50%'}, 250, 'swing');
+				$("#project4").promise().done(function() {
+					$("#pDescription4Slide").delay(100).fadeIn(250);
+				});
+			}
+			else if($("#pDescription4Slide").is(":visible")){
+				$("#infoCollapse4").delay(firstAnim).fadeOut(250);
+				$("#pDescription4Slide").delay(secondAnim).fadeOut(250);
+				$("#project4").delay(thirdAnim).animate({right: 0}, 250, 'swing');
+				$("#project4").promise().done(function() {
+					$("#project3").delay(100).fadeIn(250);
+				});
+			}
+		});
 		
-		$("#projectName1").click(function(){
-			if($("#projectName1Text").is(":visible")){
-				$("#projectName1Text").fadeOut(300, function(){
-					$("#projectName1Explanation").fadeIn(300);
-				});
+		// On hover.
+		$("#project1").hover(
+			function(){ 
+				if($("#project2").is(":visible")){
+					$("#infoExpand1").delay(100).fadeIn(250)
+				}
+				else if($("#pDescription1Slide").is(":visible")){
+					$("#infoCollapse1").delay(100).fadeIn(250)
+				}
+			},
+			function(){
+				if($("#project2").is(":visible")){
+					$("#infoExpand1").delay(100).fadeOut(250);
+				}
+				else if($("#pDescription1Slide").is(":visible")){
+					$("#infoCollapse1").delay(100).fadeOut(250);
+				}
+				 
 			}
-			else if($("#projectName1Explanation").is(":visible")){
-				$("#projectName1Explanation").fadeOut(300, function(){
-					$("#projectName1Text").fadeIn(300);
-				});
+		);
+		$("#project2").hover(
+			function(){ 
+				if($("#project1").is(":visible")){
+					$("#infoExpand2").delay(100).fadeIn(250)
+				}
+				else if($("#pDescription2Slide").is(":visible")){
+					$("#infoCollapse2").delay(100).fadeIn(250)
+				}
+			},
+			function(){
+				if($("#project1").is(":visible")){
+					$("#infoExpand2").delay(100).fadeOut(250);
+				}
+				else if($("#pDescription2Slide").is(":visible")){
+					$("#infoCollapse2").delay(100).fadeOut(250);
+				}
+				 
 			}
-		})
-		$("#projectName2").click(function(){
-			if($("#projectName2Text").is(":visible")){
-				$("#projectName2Text").fadeOut(300, function(){
-					$("#projectName2Explanation").fadeIn(300);
-				});
+		);
+		$("#project3").hover(
+			function(){ 
+				if($("#project4").is(":visible")){
+					$("#infoExpand3").delay(100).fadeIn(250)
+				}
+				else if($("#pDescription3Slide").is(":visible")){
+					$("#infoCollapse3").delay(100).fadeIn(250)
+				}
+			},
+			function(){
+				if($("#project4").is(":visible")){
+					$("#infoExpand3").delay(100).fadeOut(250);
+				}
+				else if($("#pDescription3Slide").is(":visible")){
+					$("#infoCollapse3").delay(100).fadeOut(250);
+				}
+				 
 			}
-			else if($("#projectName2Explanation").is(":visible")){
-				$("#projectName2Explanation").fadeOut(300, function(){
-					$("#projectName2Text").fadeIn(300);
-				});
+		);
+		$("#project4").hover(
+			function(){ 
+				if($("#project3").is(":visible")){
+					$("#infoExpand4").delay(100).fadeIn(250)
+				}
+				else if($("#pDescription4Slide").is(":visible")){
+					$("#infoCollapse4").delay(100).fadeIn(250)
+				}
+			},
+			function(){
+				if($("#project3").is(":visible")){
+					$("#infoExpand4").delay(100).fadeOut(250);
+				}
+				else if($("#pDescription4Slide").is(":visible")){
+					$("#infoCollapse4").delay(100).fadeOut(250);
+				}
+				 
 			}
-		})
-		$("#projectName3").click(function(){
-			if($("#projectName3Text").is(":visible")){
-				$("#projectName3Text").fadeOut(300, function(){
-					$("#projectName3Explanation").fadeIn(300);
-				});
-			}
-			else if($("#projectName3Explanation").is(":visible")){
-				$("#projectName3Explanation").fadeOut(300, function(){
-					$("#projectName3Text").fadeIn(300);
-				});
-			}
-		})
-	})
-	
+		);
+		
+	});
 </script>
-
-
-
-
-
 
 
 
