@@ -32,7 +32,7 @@
 		#first {
 			position: relative;
 			height: 60%;
-			background-color: rgba(19, 19, 19, 0.5);
+			background-color: rgba(20, 20, 20, 0.5);
 		}
 		
 		#name {
@@ -114,6 +114,7 @@
 			color: #00cccc;
 		}
 		
+		/* Skills */
 		.center {
 			position: absolute;
 			top: 50%;
@@ -135,12 +136,10 @@
 			font-family: "arial";
 			font-size: 25px;
 			color: #fff;
+			margin: 10px;
 		}
 		#skillsList {
 			position: relative;
-			height: 100px;
-		}
-		#centerSkillsList {
 		}
 		#skillsPill {
 			float: left;
@@ -157,7 +156,7 @@
 		/*Projects Title Slide*/
 		#projectsTitleSlide {
 			position: relative;
-			height: 75%;
+			height: 100%;
 			min-height: 400px;
 			background-color: rgba(20, 20, 20, 0.5)
 		}
@@ -169,231 +168,55 @@
 			font-weight: 500;
 		}
 		
-		/* Projects. */
-		.slide {
+		/* Projects */
+		.project50 {
 			position: relative;
-			float: left;
-			width: 100%;
+			height: 75%;
+			background-color: rgba(20, 20, 20, 0.5);
+		}
+		.projectLeft {
+			text-align: left;
+			padding: 50px 100px;
+		}
+		.projectLeft #introText {
+			text-align: left;
+		}
+		.projectRight {
 			height: 100%;
-			margin: 0px;
+			text-align: right;
+			padding: 50px 100px;
+		}
+		.projectRight #introText {
+			text-align: right;
+		}
+		.projectRight #skillsPill {
+			float: right;
+		}
+		.projectRightFloat {
+			float: right;
+		}
+		.projectTitle {
+			border-bottom: 1px solid #fff;
+			margin: 0;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			font-size: 50px;
+			font-weight: 100;
+			padding: 5px 0;
+			margin: 0 10px;
+		}
+		.projectDesc {
+			margin: 50px 10px;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			font-size: 15px;
+			max-width: 1000px;
 		}
 		
-		#project1 {
-			position: absolute;
-			left: 0;
-			width: 50%;
-			height: 100%;
-			z-index: 2;
-			overflow: hidden;
-			cursor: pointer;
-		}
-		#project2 {
-			position: absolute;
-			right: 0;
-			width: 50%;
-			height: 100%;
-			z-index: 2;
-			overflow: hidden;
-			cursor: pointer;
-		}
-		#project3 {
-			position: absolute;
-			left: 0;
-			width: 50%;
-			height: 100%;
-			z-index: 2;
-			overflow: hidden;
-			cursor: pointer;
-		}
-		#project4 {
-			position: absolute;
-			right: 0;
-			width: 50%;
-			height: 100%;
-			z-index: 2;
-			overflow: hidden;
-			cursor: pointer;
-		}
-		.imageContainer {
-			float: left;
-			height: 100%;
-			width: 100%;
-			z-index: 1;
-			overflow: hidden;
-		}
-		.projectImg {
-			display: block;
-			width: 100%;
-			height: 100%;
-			/* filter: blur(1px); */
-			transform: scale(1.01);
-			transition: transform 30s linear;
-		}
-		.projectImg:hover {
-			transform: scale(1.5);
+		.Tech {
+			margin: 75px 0;
 		}
 		
-		#pDescription1Slide {
-			position: absolute;
-			left: 0;
-			width: 50%;
-			height: 100%;
-			display: none;
-			z-index: 0;
-		}
-		#pDescription2Slide {
-			position: absolute;
-			right: 0;
-			width: 50%;
-			height: 100%;
-			display: none;
-			z-index: 0;
-		}
-		#pDescription3Slide {
-			position: absolute;
-			left: 0;
-			width: 50%;
-			height: 100%;
-			display: none;
-			z-index: 0;
-		}
-		#pDescription4Slide {
-			position: absolute;
-			right: 0;
-			width: 50%;
-			height: 100%;
-			display: none;
-			z-index: 0;
-		}
-		.pDescriptionText {
-			position: absolute;
-			color: #000000;
-			top: 50%;
-			left: 50%;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-		}
-		
-		
-		#projectName1 {
-			color: #ff4433;
-		}
-		#projectName2 {
-			color: #ffffff;
-		}
-		#projectName3 {
-			color: #000000;
-		}
-		#projectName4 {
-			color: #fbff6b;
-		}
-		.projectNameText {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			font-family: arial;
-			font-size: 2.5em;
-			text-decoration: none;
-			white-space: nowrap;
-			font-weight: bold;
-		}
-		
-		#infoExpand1 {
-			position: absolute;
-			top: 52.5%;
-			left: 50%;
-			margin-top: 15px;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			display: none;
-			color: #ff4433;
-		}
-		#infoExpand2 {
-			position: absolute;
-			top: 52.5%;
-			left: 50%;
-			margin-top: 15px;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			display: none;
-			color: #ffffff;
-		}
-		#infoExpand3 {
-			position: absolute;
-			top: 52.5%;
-			left: 50%;
-			margin-top: 15px;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			display: none;
-			color: #000000;
-		}
-		#infoExpand4 {
-			position: absolute;
-			top: 52.5%;
-			left: 50%;
-			margin-top: 15px;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			display: none;
-			color: #fbff6b;
-		}
-		.infoExpandText {
-			font-family: arial;
-			font-size: 1em;
-			font-weight: bold;
-			text-decoration: none;
-			white-space: nowrap;
-		}
-		#infoCollapse1 {
-			position: absolute;
-			top: 52.5%;
-			left: 50%;
-			margin-top: 15px;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			display: none;
-			color: #ff4433;
-		}
-		#infoCollapse2 {
-			position: absolute;
-			top: 52.5%;
-			left: 50%;
-			margin-top: 15px;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			display: none;
-			color: #ffffff;
-		}
-		#infoCollapse3 {
-			position: absolute;
-			top: 52.5%;
-			left: 50%;
-			margin-top: 15px;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			display: none;
-			color: #000000;
-		}
-		#infoCollapse4 {
-			position: absolute;
-			top: 52.5%;
-			left: 50%;
-			margin-top: 15px;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			display: none;
-			color: #fbff6b;
-		}
-		.infoExpandText {
-			font-family: arial;
-			font-size: 1em;
-			font-weight: bold;
-			text-decoration: none;
-			white-space: nowrap;
-		}
 		
 		/* Contact Page Panel */
 		#contactPage {
@@ -402,7 +225,7 @@
 			width: 100%;
 			height: 100%;
 			margin: 0px;
-			background-color: #191919;
+			background-color: rgba(20, 20, 20, 1);
 		}
 		#contactPageTitle {
 			position: absolute;
