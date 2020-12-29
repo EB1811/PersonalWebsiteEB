@@ -29,29 +29,43 @@
 			-webkit-text-size-adjust: 100%;
 			-moz-text-size-adjust: 100%;
 			-ms-text-size-adjust: 100%;
-			background-color: #ffffff;
+			background-color: #191919;
 		}
+		
+		/*imageOnBg*/
+		#designImg {
+			position: fixed;
+			height: 100%;
+			width: 100%;
+			background-image: url("desk-work-software-enchanced1.jpg");
+			background-repeat: no-repeat;
+			background-size: cover
+		}
+		/*
+		#designImg2 {
+			height: 100%;
+			width: 100%;
+			background-image: url("desk-work-software-enchanced1.jpg");
+		}*/
 		
 		/* Name Page. */
 		#first {
 			position: relative;
-			height: 100%;
-			background-color: #191919;
-			z-index: 3;
+			height: 60%;
+			background-color: rgba(19, 19, 19, 0.5);
 		}
 		
 		#name {
 			position: absolute;
 			width: 100%;
-			top: 45%;
+			top: 40%;
 			transform: translateY(-55%);
-			color: #00cccc;
+			color: #fff;
 			font-family: 'Tangerine', cursive;
 			text-align: center;
 			font-size: 100px;
-			letter-spacing: 0.01em;
+			font-weight: 500;
 			animation-name: fadein1;
-			animation-duration: 4s;
 		}
 		@keyframes fadein1 {
 			from { opacity: 0;}
@@ -61,18 +75,17 @@
 		#infoAboutMe {
 			position: absolute;
 			width: 100%;
-			top: 50%;
+			top: 42.5%;
 			margin-top: 25px;
 			transform: translateY(-55%);
 		}
 		#role {
 			width: 100%;
 			margin-top: 75px;
-			color: #fff;
+			color: #ff3333;
 			text-align: center;
+			font-family: "arial";
 			font-size: 25px;
-			letter-spacing: 0.01em;
-			font-family: arial;
 			animation-name: fadein1;
 			animation-duration: 4s;
 		}
@@ -130,7 +143,9 @@
 		
 		#skillsPanel {
 			position: relative;
-			height: 500px;
+			height: 40%;
+			min-height: 400px;
+			background-color: rgba(20, 20, 20, 1)
 		}
 		#skillsIntro {
 			margin: 25px;
@@ -138,7 +153,8 @@
 		#introText {
 			text-align: center;
 			font-family: "arial";
-			font-size: 30px;
+			font-size: 25px;
+			color: #fff;
 		}
 		#skillsList {
 			position: relative;
@@ -424,6 +440,7 @@
 </head>
 
 <body>
+	<div id="designImg"></div>
 	<div id="first">
 		<div id="name">
 			Emmanuils Borovikovs
@@ -463,10 +480,10 @@
 					<h2 id="skillText" style="background-color: #efd63b; color: #000; border: 5px solid #efd63b;">JavaScript</h2>
 				</div>
 				<div id="skillsPill">
-					<h2 id="skillText" style="background-color: #61dafb; color: #000; border: 5px solid #61dafb;">React</h2>
+					<h2 id="skillText" style="background-color: #61dafb; color: #000; border: 5px solid #61dafb;">React.js</h2>
 				</div>
 				<div id="skillsPill">
-					<h2 id="skillText" style="background-color: #4fc08d; color: #fff; border: 5px solid #4fc08d">Vue</h2>
+					<h2 id="skillText" style="background-color: #4fc08d; color: #fff; border: 5px solid #4fc08d">Vue.js</h2>
 				</div>
 				<div id="skillsPill">
 					<h2 id="skillText" style="background-color: #7952b3; color: #fff; border: 5px solid #7952b3">Bootstrap</h2>
