@@ -82,7 +82,7 @@
 			font-family: "arial";
 			font-size: 25px;
 			animation-name: fadein1;
-			animation-duration: 4s;
+			animation-duration: 3s;
 		}
 		
 		#showcaseButton {
@@ -213,7 +213,6 @@
 		.projectTitle {
 			border-bottom: 1px solid #fff;
 			margin: 0;
-			color: #fff;
 			font-family: Arial, sans-serif;
 			font-size: 50px;
 			font-weight: 100;
