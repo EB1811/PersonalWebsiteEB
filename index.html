@@ -21,6 +21,11 @@
 </head>
 
 <body>
+	<!-- PROGRESS BAR -->
+	<div class="progressBarContainer"> 
+		<div class="progressBar" id="bar"></div>
+	</div>
+	
 	<div id="designImg"></div>
 	<div id="first">
 		<div id="name">
@@ -111,7 +116,7 @@
 	</div>
 
 	<div class="project50">
-			<div class="projectLeft" data-aos="fade" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out">
+			<div class="projectLeft" data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out">
 				<h1 class="projectTitle">React app helping users achieve rental harmony</h1>
 				<p class="projectDesc">
 				Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
@@ -158,7 +163,7 @@
 			</div>
 	</div>
 	<div class="project50">
-		<div class="projectRight" data-aos="fade" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out"">
+		<div class="projectRight" data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out"">
 			<h1 class="projectTitle">Project 2</h1>
 			<div class="projectRightFloat">
 				<p class="projectDesc">
@@ -192,7 +197,7 @@
 		</div>
 	</div>
 	<div class="project50">
-			<div class="projectLeft" data-aos="fade" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out">
+			<div class="projectLeft" data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out">
 				<h1 class="projectTitle">Project 3</h1>
 				<p class="projectDesc">
 				Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
@@ -239,10 +244,24 @@
 	<script>
 	AOS.init();
 	</script>
+	
+	<script>
+	// When the user scrolls the page, execute fillBar 
+	window.onscroll = function() {fillBar()};
+
+	function fillBar() {
+	  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+	  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	  var scrolled = (winScroll / height) * 100;
+	  document.getElementById("bar").style.width = scrolled + "%";
+	}
+	</script>
 		
 </body>
 
 </html>
+
+
 
 
 

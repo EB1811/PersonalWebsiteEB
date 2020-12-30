@@ -12,6 +12,21 @@
 			background-color: #191919;
 		}
 		
+		/* Scroll Progress Bar */
+		.progressBarContainer {
+			position: fixed;
+			top: 0;
+			z-index: 10;
+			width: 100%;
+			height: 2x;
+			background: rgba(20, 20, 20, 0.5);
+		}
+		.progressBar {
+			height: 2px;
+			background: #fff;
+			width: 0%;
+		}
+		
 		/*imageOnBg*/
 		#designImg {
 			position: fixed;
