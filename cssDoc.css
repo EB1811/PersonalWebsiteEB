@@ -90,7 +90,8 @@
 				font-size: 75px;
 			}
 			#role {
-				font-size: 20px;
+				margin-top: 200px;
+				font-size: 17.5px;
 			}
 		}
 		/* End Name Page */
@@ -185,7 +186,7 @@
 		/* Skills - Small*/
 		@media only screen and (max-width: 700px) {
 			#introText {
-				font-size: 20px;
+				font-size: 17.5px;
 			}
 			#skillText {
 				font-size: 15px;
@@ -269,6 +270,21 @@
 			}
 			.projectDesc {
 				font-size: 13px;
+			}
+			.projectLeft {
+				padding: 17.5px 25px;
+			}
+			/* Remove right allignment at small. */
+			.projectRight {
+				padding: 17.5px 25px;
+				text-align: left;
+			}
+			.projectRight #introText {
+				text-align: left;
+				margin-top: auto;
+			}
+			.projectRight #skillsList {
+				justify-content: flex-start;
 			}
 		}
 		
