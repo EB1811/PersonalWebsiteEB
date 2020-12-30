@@ -155,9 +155,10 @@
 		}
 		#skillsList {
 			position: relative;
+			display: flex;
+			flex-wrap: wrap;
 		}
 		#skillsPill {
-			float: left;
 			margin: 0 10px;
 		}
 		#skillText {
@@ -204,8 +205,8 @@
 		.projectRight #introText {
 			text-align: right;
 		}
-		.projectRight #skillsPill {
-			float: right;
+		.projectRight #skillsList {
+			justify-content: flex-end;
 		}
 		.projectRightFloat {
 			float: right;
@@ -229,6 +230,12 @@
 		
 		.Tech {
 			margin: 75px 0;
+			width: 100%;
+		}
+		.projectRight .Tech {
+			margin: 25px 0;
+			float: right;
+			width: 100%;
 		}
 		
 		
