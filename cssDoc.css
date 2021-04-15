@@ -272,6 +272,13 @@ html {
     font-size: 15px;
     max-width: 1000px;
 }
+.projectImg {
+    width: 400px;
+    height: 203px;
+    border-radius: 4px;
+    margin: 0 10px;
+    border: 5px solid #cecece;
+}
 
 .Tech {
     margin: 75px 0;
