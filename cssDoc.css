@@ -232,7 +232,7 @@ html {
 /* Projects */
 .project50 {
     position: relative;
-    min-height: 75%;
+    min-height: 100%;
     background-color: rgba(20, 20, 20, 0.5);
 }
 .projectLeft {
@@ -271,6 +271,10 @@ html {
     font-family: Arial, sans-serif;
     font-size: 15px;
     max-width: 1000px;
+}
+
+.imageContainer {
+    margin: 0 0 75px 0;
 }
 /* Thumbnail */
 .projectImg {
