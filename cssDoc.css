@@ -14,6 +14,8 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    width: 100vw;
+    max-width: 100%;
 }
 
 /* Scroll Progress Bar */
@@ -55,19 +57,23 @@ html {
 #first {
     position: relative;
     height: 60%;
+    padding: 25px 0;
     background-color: rgba(20, 20, 20, 0.5);
 }
 
-#name {
+#namecontainer {
     position: absolute;
     width: 100%;
     top: 40%;
     transform: translateY(-55%);
+}
+#name {
     color: #fff;
-    font-family: "Tangerine", cursive;
+    font-family: Helvetica, sans-serif;
     text-align: center;
-    font-size: 100px;
-    font-weight: 500;
+    font-size: 60px;
+    font-weight: 100;
+    margin: 5px;
     animation-name: fadein1;
     animation-duration: 5s;
 }
@@ -79,11 +85,34 @@ html {
         opacity: 1;
     }
 }
+#contactLink1 {
+    margin: 0px 10px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    color: #5cefff;
+    max-width: 1000px;
+    text-decoration: none;
+}
+#contactLink1:hover {
+    text-decoration: underline;
+}
+#contactLink2 {
+    margin: 0px 10px;
+    color: #5eff5e;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    max-width: 1000px;
+    text-decoration: none;
+}
+#contactLink2:hover {
+    text-decoration: underline;
+}
 #infoAboutMe {
     position: absolute;
     width: 100%;
     top: 42.5%;
-    margin-top: 25px;
+    margin-top: 30px;
     transform: translateY(-55%);
 }
 #role {
@@ -97,14 +126,26 @@ html {
     animation-name: fadein1;
     animation-duration: 3s;
 }
+#contactInfo {
+    margin-bottom: 30px;
+}
 /* Name Page - Small */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 700px) {
     #name {
-        font-size: 75px;
+        font-size: 35px;
     }
     #role {
         margin-top: 200px;
         font-size: 17.5px;
+    }
+    #contactInfo {
+        margin-bottom: 30px;
+    }
+    #contactLink1 {
+        font-size: 25px;
+    }
+    #contactLink2 {
+        font-size: 25px;
     }
 }
 /* End Name Page */
@@ -114,7 +155,6 @@ html {
     width: 100%;
     bottom: 0;
     text-align: center;
-    font-style: italic;
 }
 .showcaseText {
     display: inline-block;
@@ -174,7 +214,7 @@ html {
 #introText {
     text-align: center;
     font-family: "arial";
-    font-size: 25px;
+    font-size: 30px;
     color: #fff;
     margin: 10px;
 }
@@ -197,7 +237,7 @@ html {
 /* Skills - Small*/
 @media only screen and (max-width: 700px) {
     #introText {
-        font-size: 17.5px;
+        font-size: 25px;
     }
     #skillText {
         font-size: 15px;
@@ -214,9 +254,9 @@ html {
 }
 .titleLarge {
     color: #fff;
-    font-family: "Tangerine", cursive;
+    font-family: Helvetica, sans-serif;
     text-align: center;
-    font-size: 100px;
+    font-size: 60px;
     font-weight: 500;
 }
 .projectLink {
@@ -235,6 +275,16 @@ html {
     position: relative;
     min-height: 100%;
     background-color: rgba(20, 20, 20, 0.5);
+}
+@media only screen and (max-width: 1200px) {
+    .project50 {
+        padding: 25px 0;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .project50 {
+        padding: 50px 0;
+    }
 }
 .projectLeft {
     text-align: left;
@@ -294,6 +344,18 @@ html {
     .projectImg {
         width: 300px;
         height: 175px;
+    }
+    .titleLarge {
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .projectImg {
+        width: 285px;
+        height: 165px;
+    }
+    .titleLarge {
+        font-size: 35px;
     }
 }
 /* Enlarged */
@@ -435,9 +497,9 @@ a.projectImg-close:after {
     top: 45%;
     transform: translateY(-55%);
     color: #00cccc;
-    font-family: "Tangerine", cursive;
+    font-family: Helvetica, sans-serif;
     text-align: center;
-    font-size: 100px;
+    font-size: 60px;
     letter-spacing: 0.01em;
 }
 #contactPageDesc {
@@ -450,6 +512,7 @@ a.projectImg-close:after {
     font-family: "arial";
     font-size: 15px;
     font-weight: 400;
+    text-align: center;
     color: #fff;
 }
 .contactPageDescText {
@@ -462,7 +525,7 @@ a.projectImg-close:after {
 /* Contact Page Panel - Small */
 @media only screen and (max-width: 650px) {
     #contactPageTitle {
-        font-size: 75px;
+        font-size: 35px;
     }
     #contactPageDesc {
         font-size: 20px;
