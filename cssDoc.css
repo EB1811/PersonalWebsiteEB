@@ -72,24 +72,18 @@ html {
     font-family: Helvetica, sans-serif;
     text-align: center;
     font-size: 60px;
-    font-weight: 100;
-    margin: 5px;
-    animation-name: fadein1;
-    animation-duration: 5s;
+    font-weight: 500;
+    margin: 25px;
 }
-@keyframes fadein1 {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+#contactInfo {
+    text-align: center;
+    margin-bottom: 50px;
 }
 #contactLink1 {
     margin: 0px 10px;
-    color: #fff;
     font-family: Arial, sans-serif;
-    font-size: 30px;
+    font-weight: 200;
+    font-size: 22.5px;
     color: #5cefff;
     max-width: 1000px;
     text-decoration: none;
@@ -99,9 +93,10 @@ html {
 }
 #contactLink2 {
     margin: 0px 10px;
-    color: #5eff5e;
+    color: #5cefff;
     font-family: Arial, sans-serif;
-    font-size: 30px;
+    font-weight: 200;
+    font-size: 22.5px;
     max-width: 1000px;
     text-decoration: none;
 }
@@ -126,13 +121,10 @@ html {
     animation-name: fadein1;
     animation-duration: 3s;
 }
-#contactInfo {
-    margin-bottom: 30px;
-}
 /* Name Page - Small */
 @media only screen and (max-width: 700px) {
     #name {
-        font-size: 35px;
+        font-size: 40px;
     }
     #role {
         margin-top: 200px;
@@ -142,10 +134,10 @@ html {
         margin-bottom: 30px;
     }
     #contactLink1 {
-        font-size: 25px;
+        font-size: 19.5px;
     }
     #contactLink2 {
-        font-size: 25px;
+        font-size: 19.5px;
     }
 }
 /* End Name Page */
