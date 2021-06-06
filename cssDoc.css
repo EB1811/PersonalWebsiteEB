@@ -60,7 +60,11 @@ html {
     padding: 25px 0;
     background-color: rgba(20, 20, 20, 0.5);
 }
-
+.selfImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
 #namecontainer {
     position: absolute;
     width: 100%;
