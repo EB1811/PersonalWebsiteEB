@@ -57,6 +57,7 @@ html {
 #first {
     position: relative;
     height: 60%;
+    min-height: 500px;
     padding: 25px 0;
     background-color: rgba(20, 20, 20, 0.5);
 }
@@ -91,8 +92,14 @@ html {
     font-weight: 300;
     margin: 0;
 }
+#buttonToProjects {
+    margin-bottom: 50px;
+}
 /* Name Page - Small */
 @media only screen and (max-width: 700px) {
+    #buttonToProjects {
+        margin-bottom: 25px;
+    }
     #name {
         font-size: 40px;
     }
