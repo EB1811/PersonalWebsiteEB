@@ -66,60 +66,26 @@ html {
     width: 100%;
     top: 40%;
     transform: translateY(-55%);
+    text-align: center;
 }
 #name {
     color: #fff;
     font-family: Helvetica, sans-serif;
-    text-align: center;
     font-size: 60px;
     font-weight: 500;
-    margin: 25px;
+    margin: 10px;
 }
 #contactInfo {
     text-align: center;
-    margin-bottom: 50px;
-}
-#contactLink1 {
-    margin: 0px 10px;
-    font-family: Arial, sans-serif;
-    font-weight: 200;
-    font-size: 22.5px;
-    color: #5cefff;
-    max-width: 1000px;
-    text-decoration: none;
-}
-#contactLink1:hover {
-    text-decoration: underline;
-}
-#contactLink2 {
-    margin: 0px 10px;
-    color: #5cefff;
-    font-family: Arial, sans-serif;
-    font-weight: 200;
-    font-size: 22.5px;
-    max-width: 1000px;
-    text-decoration: none;
-}
-#contactLink2:hover {
-    text-decoration: underline;
-}
-#infoAboutMe {
-    position: absolute;
-    width: 100%;
-    top: 42.5%;
-    margin-top: 30px;
-    transform: translateY(-55%);
+    margin-bottom: 15px;
 }
 #role {
     width: 100%;
-    margin-top: 75px;
-    color: #5cefff;
-    text-align: center;
+    color: #fff;
     font-family: "arial";
     font-size: 25px;
-    font-weight: 400;
-    animation-name: fadein1;
-    animation-duration: 3s;
+    font-weight: 300;
+    margin: 0;
 }
 /* Name Page - Small */
 @media only screen and (max-width: 700px) {
@@ -133,12 +99,6 @@ html {
     #contactInfo {
         margin-bottom: 30px;
     }
-    #contactLink1 {
-        font-size: 19.5px;
-    }
-    #contactLink2 {
-        font-size: 19.5px;
-    }
 }
 /* End Name Page */
 
@@ -150,13 +110,12 @@ html {
 }
 .showcaseText {
     display: inline-block;
-    padding: 5px;
+    padding: 15px;
     margin: 0 2.5px;
-    background-color: #151515;
-    color: #ffffff;
-    border: 3px solid #151515;
+    background-color: #69f169;
+    color: #222;
     border-radius: 3.5px;
-    box-shadow: 1px 1px 5px black;
+    box-shadow: 0px 0px 5px black;
     text-align: center;
     font-family: arial;
     font-size: 16px;
@@ -166,7 +125,7 @@ html {
     transition-duration: 0.2s;
 }
 .showcaseText:hover {
-    color: #00cccc;
+    background-color: #8cff8c;
 }
 #gitLinkText {
     display: inline-block;
