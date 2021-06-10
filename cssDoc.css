@@ -17,22 +17,6 @@ body {
     background-image: url("desk-work-software-enchanced1.jpg");
 }
 /* Loading Div*/
-@keyframes slideOutToTop {
-    0% {
-        transform: translateY(0);
-    }
-    75% {
-        opacity: 1;
-    }
-    100% {
-        top: 100%;
-        transform: translateY(-100%);
-        overflow: hidden;
-        opacity: 0;
-        display: none;
-        visibility: hidden;
-    }
-}
 #loading {
     position: fixed;
     display: flex;
@@ -44,7 +28,11 @@ body {
     left: 0;
     background-color: #191919;
     z-index: 99;
-    transition: opacity 1s;
+    transition-duration: 1s;
+}
+.loaded {
+    /* opacity: 0; */
+    transform: translateY(-100%);
 }
 /* CSS Loading spinner. */
 .lds-ring {

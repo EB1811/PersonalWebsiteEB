@@ -999,8 +999,8 @@
             // Show loading div while loading.
             window.onload = function () {
                 const loadingDiv = document.getElementById("loading");
+                loadingDiv.className += " loaded";
 
-                loadingDiv.style.opacity = "0";
                 loadingDiv.addEventListener("transitionend", () =>
                     loadingDiv.remove()
                 );
