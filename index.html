@@ -6,7 +6,7 @@
             charset="UTF-8"
             content="width=device-width, initial-scale=1"
         />
-        <title>Title</title>
+        <title>Emmanuil Borovikovs</title>
 
         <!--Google Fonts-->
         <link
@@ -21,6 +21,15 @@
     </head>
 
     <body>
+        <!--Loading Div-->
+        <div id="loading">
+            <div class="lds-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
         <!-- PROGRESS BAR -->
         <div class="progressBarContainer">
             <div class="progressBar" id="bar"></div>
@@ -986,6 +995,16 @@
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
             AOS.init();
+
+            // Show loading div while loading.
+            window.onload = function () {
+                const loadingDiv = document.getElementById("loading");
+
+                loadingDiv.style.opacity = "0";
+                loadingDiv.addEventListener("transitionend", () =>
+                    loadingDiv.remove()
+                );
+            };
 
             // When the user scrolls the page, execute fillBar
             window.onscroll = function () {
