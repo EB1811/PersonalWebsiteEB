@@ -389,7 +389,7 @@ html {
         height: 175px;
     }
     .titleLarge {
-        font-size: 35px;
+        font-size: 40px;
     }
 }
 @media only screen and (max-width: 450px) {
@@ -398,7 +398,7 @@ html {
         height: 165px;
     }
     .titleLarge {
-        font-size: 35px;
+        font-size: 40px;
     }
 }
 /* Enlarged */
