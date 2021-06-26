@@ -13,6 +13,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    font-family: Helvetica, sans-serif;
     width: 100vw;
     max-width: 100%;
     background-image: url("desk-work-software-enchanced1.jpg");
@@ -123,7 +124,7 @@ html {
 #namecontainer {
     position: absolute;
     width: 100%;
-    top: 40%;
+    top: 47.5%;
     transform: translateY(-55%);
     text-align: center;
 }
@@ -147,7 +148,7 @@ html {
     margin: 0;
 }
 #buttonToProjects {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 /* Name Page - Small */
 @media only screen and (max-width: 700px) {
