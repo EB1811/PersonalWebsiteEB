@@ -111,7 +111,7 @@ html {
 /* Name Page. */
 #first {
     position: relative;
-    height: 60%;
+    height: 75%;
     min-height: 500px;
     padding: 25px 0;
     background-color: rgba(20, 20, 20, 0.5);
@@ -126,6 +126,26 @@ html {
     width: 100%;
     top: 47.5%;
     transform: translateY(-55%);
+    text-align: center;
+}
+.img-info-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.selfImage-flex {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.selfName-flex {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
 }
 #name {
