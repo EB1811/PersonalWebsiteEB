@@ -110,10 +110,12 @@ html {
 
 /* Name Page. */
 #first {
-    position: relative;
-    height: 75%;
-    min-height: 500px;
-    padding: 25px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    min-height: 600px;
     background-color: rgba(20, 20, 20, 0.5);
 }
 .selfImage {
@@ -122,22 +124,29 @@ html {
     border-radius: 100%;
 }
 #namecontainer {
-    position: absolute;
+    flex-grow: 1;
+    text-align: center;
+    /* position: absolute;
     width: 100%;
     top: 47.5%;
-    transform: translateY(-55%);
-    text-align: center;
+    transform: translateY(-55%); */
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
 }
 #name {
     color: #fff;
     font-family: Helvetica, sans-serif;
-    font-size: 60px;
+    font-size: 3.5rem;
     font-weight: 500;
     margin: 10px;
 }
 #contactInfo {
+    flex-grow: 1;
     text-align: center;
-    margin-bottom: 15px;
+    margin-top: 15px;
 }
 #role {
     width: 100%;
@@ -147,8 +156,16 @@ html {
     font-weight: 300;
     margin: 0;
 }
+#showcaseButton {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
 #buttonToProjects {
     margin-bottom: 20px;
+    text-align: center;
 }
 /* Name Page - Small */
 @media only screen and (max-width: 700px) {
@@ -156,7 +173,7 @@ html {
         margin-bottom: 25px;
     }
     #name {
-        font-size: 40px;
+        font-size: 1.75rem;
     }
     #role {
         font-size: 17.5px;
@@ -167,12 +184,6 @@ html {
 }
 /* End Name Page */
 
-#showcaseButton {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    text-align: center;
-}
 .showcaseText {
     display: inline-block;
     padding: 15px;
