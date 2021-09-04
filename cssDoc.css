@@ -101,13 +101,6 @@ html {
     -webkit-perspective: 1000;
 }
 
-/*
-		#designImg2 {
-			height: 100%;
-			width: 100%;
-			background-image: url("desk-work-software-enchanced1.jpg");
-		}*/
-
 /* Name Page. */
 #first {
     display: flex;
@@ -127,9 +120,6 @@ html {
     flex-grow: 1;
     text-align: center;
     width: 100%;
-    /* position: absolute;
-    top: 47.5%;
-    transform: translateY(-55%); */
     display: flex;
     flex-flow: column;
     align-items: center;
